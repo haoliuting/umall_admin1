@@ -70,3 +70,22 @@ export let reqMenuUpdate=(user)=>{
     })
 }
 /************菜单管理 end**************************/
+//7.添加
+export const reqgoodsAdd=(user)=>{
+    return axios({
+        url:baseUrl+"/api/goodsadd",
+        method:"post",
+        data:qs.stringify(user)
+    })
+}
+
+
+//19.列表
+export let reqgoodslist=()=>{
+    return axios({
+        url:baseUrl+"/api/goodslist",
+        params:{
+            istree:true
+        }
+    })
+}

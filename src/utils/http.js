@@ -79,6 +79,22 @@ export const reqgoodsAdd=(user)=>{
     })
 }
 
+//7.添加
+export const reqcateAdd=(user)=>{
+    return axios({
+        url:baseUrl+"/api/cateadd",
+        method:"post",
+        data:qs.stringify(user)
+    })
+}
+export const reqbannerAdd=(user)=>{
+    return axios({
+        url:baseUrl+"/api/banneradd",
+        method:"post",
+        data:qs.stringify(user)
+    })
+}
+
 
 //19.列表
 export let reqgoodslist=()=>{
@@ -89,3 +105,20 @@ export let reqgoodslist=()=>{
         }
     })
 }
+export let reqcatelist=()=>{
+    return axios({
+        url:baseUrl+"/api/catelist",
+        params:{
+            istree:true
+        }
+    })
+}
+export let reqbannerlist=()=>{
+    return axios({
+        url:baseUrl+"/api/bannerlist",
+        params:{
+            istree:true
+        }
+    })
+}
+

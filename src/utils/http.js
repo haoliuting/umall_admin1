@@ -70,3 +70,23 @@ export let reqMenuUpdate=(user)=>{
     })
 }
 /************菜单管理 end**************************/
+
+//7.添加
+export const reqbannerAdd=(user)=>{
+    return axios({
+        url:baseUrl+"/api/banneradd",
+        method:"post",
+        data:qs.stringify(user)
+    })
+}
+
+
+//19.列表
+export let reqbannerlist=()=>{
+    return axios({
+        url:baseUrl+"/api/bannerlist",
+        params:{
+            istree:true
+        }
+    })
+}
